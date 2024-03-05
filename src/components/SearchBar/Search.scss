@@ -1,0 +1,14 @@
+.search {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  &__icon {
+    margin: 0.5rem;
+  }
+
+  &__input {
+    border: none;
+  }
+}
