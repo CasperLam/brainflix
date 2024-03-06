@@ -7,6 +7,11 @@
   flex-direction: column;
   justify-content: center;
 
+  @include tablet-up {
+    flex-direction: row;
+    margin: 2rem;
+  }
+
   &__logo {
     margin: auto;
     @include component-space;

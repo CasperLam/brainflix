@@ -19,3 +19,9 @@
     margin-bottom: 2rem;
   }
 }
+
+@mixin button-bg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+}

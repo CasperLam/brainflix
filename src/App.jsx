@@ -1,5 +1,5 @@
 import "./App.scss";
-import Header from "./components/Header/Header.js";
+import Header from "./components/Header/Header.jsx";
 
 export default function App() {
   return (

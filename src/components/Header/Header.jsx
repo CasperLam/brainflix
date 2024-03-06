@@ -1,7 +1,8 @@
+import "./Header.scss";
 import Search from "../SearchBar/Search";
 import logoImg from "../../assets/logo/BrainFlix-logo.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
-import "./Header.scss";
+import Button from "../Button/Button";
 
 export default function Header() {
   const logo = logoImg;
@@ -16,7 +17,7 @@ export default function Header() {
           className="header__avatar header__avatar--mobile"
         />
       </section>
-      <button className="header__button">UPLOAD</button>
+      <Button className="button button--header">UPLOAD</Button>
       <img
         src={avatar}
         alt="User's avatar"
