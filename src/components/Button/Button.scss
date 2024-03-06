@@ -7,6 +7,13 @@
   background-color: $brainflix-blue;
   color: $white;
   padding: 1rem;
+  font-weight: 600;
+
+  @include tablet-up {
+    margin-right: 1.5rem;
+    padding: 0;
+    min-width: 10rem;
+  }
 
   &--header {
     @include button-bg("../../assets/icons/upload.svg");
