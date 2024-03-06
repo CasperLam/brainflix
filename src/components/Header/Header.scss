@@ -4,10 +4,11 @@
   justify-content: center;
 
   &__logo {
-    height: 3rem;
+    margin: 1rem auto;
   }
   &__search {
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
   }
 
@@ -17,6 +18,5 @@
     width: 2.25rem;
     object-fit: cover;
     object-position: left;
-    margin-right: 1rem;
   }
 }

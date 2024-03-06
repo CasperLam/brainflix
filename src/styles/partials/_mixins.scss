@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+@mixin tablet-up {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin component-space {
+  margin-bottom: 1rem;
+
+  @include tablet-up {
+    margin-bottom: 2rem;
+  }
+}
