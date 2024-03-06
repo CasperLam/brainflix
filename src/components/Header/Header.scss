@@ -1,12 +1,20 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
 .header {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   &__logo {
-    margin: 1rem auto;
+    margin: auto;
+    @include component-space;
+    max-width: 7.5rem;
   }
+
   &__search {
+    @include component-space;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -18,5 +26,19 @@
     width: 2.25rem;
     object-fit: cover;
     object-position: left;
+
+    &--mobile {
+      @include tablet-up {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @include tablet-up {
+        display: block;
+      }
+    }
   }
 }

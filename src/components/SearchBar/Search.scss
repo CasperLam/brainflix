@@ -2,7 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 
 .search {
-  @include component-space;
   display: flex;
   border: 2px solid $mercury;
   border-radius: 5px;
