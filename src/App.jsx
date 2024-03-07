@@ -12,11 +12,14 @@ export default function App() {
     setSelectedvideo(video);
   };
 
+  const list = videos.filter((video) => {
+    return video !== selectedVideo;
+  });
   return (
     <>
       <Header />
       <Video video={selectedVideo} />
-      <VideoList videos={videos} handleVideoClick={handleVideoClick} />
+      <VideoList videos={list} handleVideoClick={handleVideoClick} />
     </>
   );
 }
