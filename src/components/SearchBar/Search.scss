@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
 
 .search {
   display: flex;
@@ -23,10 +24,10 @@
     border: none;
     background-color: $alabaster;
 
-    &::placeholder {
-      color: $brainflix-black;
-      font-family: "Avenir Next LT", monospace, sans-serif;
-    }
+    // &::placeholder {
+    color: $brainflix-black;
+    font-family: "Avenir Next LT", monospace, sans-serif;
+    // }
   }
 }
 
