@@ -9,12 +9,10 @@
 
   @include tablet-up {
     flex-direction: row;
-    margin: 1rem 2rem;
+    margin: 1rem auto;
+    padding: 0 2rem;
   }
 
-  @include desktop-up {
-    margin: 1rem auto;
-  }
   &__logo {
     margin: auto;
     @include component-space;
