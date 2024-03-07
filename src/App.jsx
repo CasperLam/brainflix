@@ -18,8 +18,10 @@ export default function App() {
   return (
     <>
       <Header />
-      <Video video={selectedVideo} />
-      <VideoList videos={list} handleVideoClick={handleVideoClick} />
+      <main className="main">
+        <Video video={selectedVideo} />
+        <VideoList videos={list} handleVideoClick={handleVideoClick} />
+      </main>
     </>
   );
 }

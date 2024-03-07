@@ -1,3 +1,4 @@
+import VideoListItem from "../VideoListItem/VideoListItem";
 import "./VideoList.scss";
 
 export default function VideoList({ videos, handleVideoClick }) {
@@ -7,23 +8,7 @@ export default function VideoList({ videos, handleVideoClick }) {
       <ul className="videoList__list">
         {videos.map((video) => {
           return (
-            <li
-              className="videoList__item"
-              onClick={() => {
-                handleVideoClick(video);
-              }}
-              key={video.id}
-            >
-              <img
-                src={video.image}
-                alt={video.title}
-                className="videoList__image"
-              />
-              <section className="videoList__content">
-                <p className="videoList__title">{video.title}</p>
-                <p className="videoList__channel">{video.channel}</p>
-              </section>
-            </li>
+            <VideoListItem video={video} handleVideoClick={handleVideoClick} />
           );
         })}
       </ul>

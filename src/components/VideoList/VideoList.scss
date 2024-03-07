@@ -10,32 +10,4 @@
     font-weight: 600;
     color: $silver;
   }
-
-  &__item {
-    @include component-space;
-    display: flex;
-  }
-
-  &__image {
-    margin-right: 1rem;
-    width: 40%;
-    border-radius: 5px;
-    background-color: $mercury;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__title {
-    font-weight: 600;
-  }
-
-  &__channel {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 }
