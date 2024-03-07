@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 *,
 *::before,
 *::after {
@@ -9,4 +11,5 @@
 body {
   font-family: "Avenir Next LT", monospace, sans-serif;
   line-height: 1.5rem;
+  color: $brainflix-primary;
 }

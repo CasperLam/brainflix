@@ -5,7 +5,7 @@ export default function VideoList() {
   return (
     <aside className="videoList">
       <h2 className="videoList__title">NEXT VIDEOS</h2>
-      <ul className="videoList">
+      <ul className="videoList__list">
         <VideoListItem />
         <VideoListItem />
         <VideoListItem />

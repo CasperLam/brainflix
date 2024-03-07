@@ -1,2 +1,13 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.videoList {
+  margin: 1rem;
+
+  &__title {
+    @include component-space;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $silver;
+  }
+}
