@@ -1,19 +1,22 @@
 import "./App.scss";
-import videoList from "./data/videos.json";
+import videos from "./data/video-details.json";
 import Header from "./components/Header/Header.jsx";
 import Video from "./components/Video/Video.jsx";
 import { useState } from "react";
 import VideoList from "./components/VideoList/VideoList.jsx";
 
 export default function App() {
-  const [video, setvideo] = useState(videoList[0]);
-  console.log(video);
+  const [selectedVideo, setSelectedvideo] = useState(videos[0]);
+
+  const handleVideoClick = (video) => {
+    setSelectedvideo(video);
+  };
 
   return (
     <>
       <Header />
-      <Video video={video} />
-      <VideoList />
+      <Video video={selectedVideo} />
+      <VideoList videos={videos} handleVideoClick={handleVideoClick} />
     </>
   );
 }
