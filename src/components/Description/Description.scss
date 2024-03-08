@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.description {
+  &__title {
+    @include component-space;
+    @include divider;
+    padding-bottom: 1rem;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+  }
+
+  &__statWrapper {
+    @include component-space;
+    @include divider;
+    display: flex;
+  }
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+
+  &__channel {
+    @include component-space;
+    font-weight: 600;
+  }
+
+  &__date {
+    @include component-space;
+    color: $silver;
+  }
+
+  &__views,
+  &__likes {
+    @extend .description__date;
+    display: flex;
+  }
+
+  &__icon {
+    height: 1.25rem;
+    padding: 0 0.5rem;
+  }
+
+  &__text {
+    @include component-space;
+  }
+}

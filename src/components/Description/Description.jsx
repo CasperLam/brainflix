@@ -15,11 +15,19 @@ export default function Description({ video }) {
         </wrapper>
         <wrapper className="description__right">
           <div className="description__views">
-            <img src={viewsIcon} alt="Views icon" />
+            <img
+              src={viewsIcon}
+              alt="Views icon"
+              className="description__icon"
+            />
             <p className="description__viewsNumber">{video.views}</p>
           </div>
           <div className="description__likes">
-            <img src={likesIcon} alt="Views icon" />
+            <img
+              src={likesIcon}
+              alt="Likes icon"
+              className="description__icon"
+            />
             <p className="description__likesNumber">{video.likes}</p>
           </div>
         </wrapper>
