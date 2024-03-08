@@ -1,0 +1,53 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+  @include divider;
+  @include component-space;
+  display: flex;
+
+  @include desktop-up {
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    background-color: $mercury;
+    margin-right: 1rem;
+
+    @include tablet-up {
+      height: 2.5rem;
+      min-width: 2.5rem;
+    }
+  }
+
+  &__header {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop-up {
+      margin-right: 2rem;
+    }
+  }
+
+  &__userName {
+    font-weight: 600;
+  }
+
+  &__date {
+    color: $silver;
+  }
+
+  &__content {
+    @include component-space;
+
+    @include desktop-up {
+      margin-right: 2rem;
+    }
+  }
+}

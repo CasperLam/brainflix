@@ -5,14 +5,20 @@ import Comment from "../Comment/Comment";
 
 export default function Comments({ video }) {
   return (
-    <section className="comments">
-      <p className="comments__counter">{video.comments.length} Comments</p>
-      <div class="comments__form">
-        <img src={avatar} alt="User's avatar" class="comments__avatar" />
+    <section className="commentSection">
+      <p className="commentSection__counter">
+        {video.comments.length} Comments
+      </p>
+      <div className="commentSection__form">
+        <img
+          src={avatar}
+          alt="User's avatar"
+          className="commentSection__avatar"
+        />
         <CommentForm />
       </div>
       {video.comments.map((comment) => {
-        return <Comment comment={comment} />;
+        return <Comment comment={comment} key={comment.id} />;
       })}
     </section>
   );

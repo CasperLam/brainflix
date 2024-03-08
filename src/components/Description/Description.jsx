@@ -7,13 +7,13 @@ export default function Description({ video }) {
     <section className="description">
       <h2 className="description__title">{video.title}</h2>
       <section className="description__statWrapper">
-        <wrapper className="description__left">
+        <div className="description__left">
           <p className="description__channel">By {video.channel}</p>
           <p className="description__date">
             {new Date(video.timestamp).toLocaleDateString()}
           </p>
-        </wrapper>
-        <wrapper className="description__right">
+        </div>
+        <div className="description__right">
           <div className="description__views">
             <img
               src={viewsIcon}
@@ -30,7 +30,7 @@ export default function Description({ video }) {
             />
             <p className="description__likesNumber">{video.likes}</p>
           </div>
-        </wrapper>
+        </div>
       </section>
       <p className="description__text">{video.description}</p>
     </section>

@@ -8,7 +8,11 @@ export default function VideoList({ videos, handleVideoClick }) {
       <ul className="videoList__list">
         {videos.map((video) => {
           return (
-            <VideoListItem video={video} handleVideoClick={handleVideoClick} />
+            <VideoListItem
+              video={video}
+              handleVideoClick={handleVideoClick}
+              key={video.id}
+            />
           );
         })}
       </ul>
