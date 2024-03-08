@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+  &__form {
+    display: flex;
+    @include divider;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    object-fit: cover;
+    object-position: left;
+    margin-right: 1rem;
+
+    @include tablet-up {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+}
