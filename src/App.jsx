@@ -1,8 +1,8 @@
+import { useState } from "react";
 import "./App.scss";
 import videos from "./data/video-details.json";
 import Header from "./components/Header/Header.jsx";
 import Video from "./components/Video/Video.jsx";
-import { useState } from "react";
 import VideoList from "./components/VideoList/VideoList.jsx";
 
 export default function App() {

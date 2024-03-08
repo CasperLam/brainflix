@@ -24,11 +24,19 @@
 
   &__title {
     font-weight: 600;
+
+    @include tablet-up {
+      font-weight: 700;
+    }
   }
 
   &__channel {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include tablet-up {
+      font-weight: 600;
+    }
   }
 }

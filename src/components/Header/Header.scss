@@ -13,6 +13,10 @@
     padding: 0 2rem;
   }
 
+  @include desktop-up {
+    padding: 0;
+  }
+
   &__logo {
     margin: auto;
     @include component-space;
@@ -26,7 +30,6 @@
   &__search {
     margin-bottom: 1rem;
     display: flex;
-    align-items: center;
     flex-wrap: nowrap;
 
     @include tablet-up {

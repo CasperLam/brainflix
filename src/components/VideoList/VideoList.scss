@@ -4,6 +4,11 @@
 .videoList {
   margin: 1rem;
 
+  @include tablet-up {
+    margin: 2rem;
+    width: 50%;
+  }
+
   &__sectionTitle {
     @include component-space;
     font-size: 1rem;
