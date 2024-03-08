@@ -2,8 +2,6 @@
 @use "../../styles/partials/variables" as *;
 
 .videoList {
-  margin: 1rem;
-
   &__item {
     @include component-space;
     display: flex;

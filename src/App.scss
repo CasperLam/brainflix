@@ -1,1 +1,12 @@
+@use "./styles/partials/mixins" as *;
 @use "./styles/partials/resets";
+
+.main {
+  &__content {
+    margin: 1rem;
+
+    @include tablet-up {
+      margin: 2rem;
+    }
+  }
+}

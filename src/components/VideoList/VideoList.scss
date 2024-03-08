@@ -2,10 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .videoList {
-  margin: 1rem;
-
   @include tablet-up {
-    margin: 2rem;
     width: 50%;
   }
 
