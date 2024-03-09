@@ -2,9 +2,15 @@
 @use "../../styles/partials/variables" as *;
 
 .commentSection {
+  &__counter {
+    @include component-space;
+    font-weight: 600;
+  }
+
   &__form {
-    display: flex;
+    @include component-space;
     @include divider;
+    display: flex;
   }
 
   &__avatar {
@@ -14,6 +20,7 @@
     object-fit: cover;
     object-position: left;
     margin-right: 1rem;
+    margin-top: 1.5rem;
 
     @include tablet-up {
       height: 2.5rem;

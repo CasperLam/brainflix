@@ -12,10 +12,21 @@
   @include tablet-up {
     margin-right: 1.5rem;
     padding: 0;
-    min-width: 10rem;
+    width: 10rem;
   }
 
   &--header {
     @include button-bg("../../assets/icons/upload.svg");
+  }
+
+  &--form {
+    @include button-bg("../../assets/icons/add_comment.svg");
+    width: 100%;
+
+    @include tablet-up {
+      margin-right: 0;
+      min-width: 10rem;
+      width: 10rem;
+    }
   }
 }

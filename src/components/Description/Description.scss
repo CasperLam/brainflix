@@ -44,5 +44,9 @@
 
   &__text {
     @include component-space;
+
+    @include desktop-up {
+      margin-right: 2rem;
+    }
   }
 }
