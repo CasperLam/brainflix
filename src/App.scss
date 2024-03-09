@@ -5,14 +5,15 @@
 .main {
   &__content {
     margin: 1rem;
+    max-width: $max-width;
 
     @include tablet-up {
-      margin: 2rem;
+      margin: 1rem auto;
+      padding: 0 2rem;
     }
 
     @include desktop-up {
-      margin: 2rem auto;
-      max-width: $max-width;
+      padding: 0;
       display: flex;
     }
   }

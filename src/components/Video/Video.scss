@@ -3,13 +3,18 @@
 
 .video {
   background: $brainflix-secondary;
-  width: 100%;
+  text-align: center;
 
-  @include tablet-up {
-    padding: 0 2rem;
-  }
+  &__content {
+    width: 100%;
+    max-width: $max-width;
 
-  @include desktop-up {
-    margin: auto;
+    @include tablet-up {
+      padding: 0 2rem;
+    }
+
+    @include desktop-up {
+      padding: 0 4rem;
+    }
   }
 }

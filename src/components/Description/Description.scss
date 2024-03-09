@@ -3,11 +3,16 @@
 
 .description {
   &__title {
-    @include component-space;
+    margin-bottom: 1rem;
     @include divider;
     padding-bottom: 1rem;
     font-size: 1.75rem;
     line-height: 2.5rem;
+
+    @include tablet-up {
+      border: none;
+      margin: 0;
+    }
   }
 
   &__statWrapper {
@@ -19,15 +24,33 @@
   &__left,
   &__right {
     width: 50%;
+
+    @include tablet-up {
+      display: flex;
+    }
+  }
+
+  &__right {
+    @include tablet-up {
+      justify-content: end;
+    }
+
+    @include desktop-up {
+      margin-right: 2rem;
+    }
   }
 
   &__channel {
-    @include component-space;
+    margin-bottom: 1rem;
     font-weight: 600;
+
+    @include tablet-up {
+      margin-right: 2rem;
+    }
   }
 
   &__date {
-    @include component-space;
+    margin-bottom: 1rem;
     color: $silver;
   }
 
@@ -35,6 +58,10 @@
   &__likes {
     @extend .description__date;
     display: flex;
+
+    @include tablet-up {
+      margin-left: 2rem;
+    }
   }
 
   &__icon {
