@@ -17,7 +17,7 @@ export default function Homepage() {
     return video !== selectedVideo;
   });
   return (
-    <>
+    <main className="main">
       <Video video={selectedVideo} />
       <section className="main__content">
         <section className="main__commentSection">
@@ -26,6 +26,6 @@ export default function Homepage() {
         </section>
         <VideoList videos={list} handleVideoClick={handleVideoClick} />
       </section>
-    </>
+    </main>
   );
 }
