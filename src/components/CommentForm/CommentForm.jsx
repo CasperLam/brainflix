@@ -11,7 +11,7 @@ export default function CommentForm() {
         <textarea
           name="comment"
           id="comment"
-          className="form__input"
+          className="form__input form__input--area"
           placeholder="Add a new comment"
         ></textarea>
         <Button className="button button--form">COMMENT</Button>

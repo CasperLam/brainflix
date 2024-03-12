@@ -29,4 +29,15 @@
       width: 10rem;
     }
   }
+
+  &--upload {
+    @include component-space;
+    @include button-bg("../../assets/icons/upload.svg");
+  }
+
+  &--cancelUpload {
+    @include component-space;
+    background-color: $bright;
+    color: $brainflix-primary-contrast;
+  }
 }

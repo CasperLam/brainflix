@@ -35,6 +35,14 @@
       height: 2.5rem;
     }
 
+    &--area {
+      height: 6rem;
+
+      @include tablet-up {
+        height: fit-content;
+      }
+    }
+
     &::placeholder {
       color: $brainflix-primary;
     }

@@ -1,2 +1,27 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.upload {
+  border-top: 2px solid $mercury;
+
+  &__container {
+    margin: 1rem;
+  }
+
+  &__title {
+    @include component-space;
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+
+  &__thumbnailTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $silver;
+  }
+
+  &__img {
+    @include component-space;
+    width: 100%;
+  }
+}
