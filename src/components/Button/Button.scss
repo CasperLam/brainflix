@@ -30,14 +30,22 @@
     }
   }
 
-  &--upload {
-    @include component-space;
-    @include button-bg("../../assets/icons/upload.svg");
+  &--publish {
+    @include button-bg("../../assets/icons/publish.svg");
+    margin-bottom: 1rem;
+
+    @include tablet-up {
+      margin: 0;
+    }
   }
 
-  &--cancelUpload {
-    @include component-space;
+  &--cancelPublish {
+    margin-bottom: 1rem;
     background-color: $bright;
     color: $brainflix-primary-contrast;
+
+    @include tablet-up {
+      margin: 0 2rem;
+    }
   }
 }

@@ -1,6 +1,4 @@
-import Button from "../Button/Button";
 import "./UploadForm.scss";
-// Some styles come from "CommentForm.scss"
 
 export default function UploadForm() {
   return (
@@ -17,16 +15,12 @@ export default function UploadForm() {
       <label htmlFor="videoDescription" className="form__label">
         ADD A VIDEO DESCRIPTION
       </label>
-      <div className="form__content">
+      <div className="form__description">
         <textarea
           id="videoDescription"
           className="form__input form__input--area"
           placeholder="Add a description to your video"
         ></textarea>
-        <div className="upload__buttons">
-          <Button className="button button--upload">PUBLISH</Button>
-          <Button className="button button--cancelUpload">CANCEL</Button>
-        </div>
       </div>
     </form>
   );

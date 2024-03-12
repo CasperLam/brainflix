@@ -4,14 +4,53 @@
 .upload {
   border-top: 2px solid $mercury;
 
+  &__spacer {
+    @extend .upload__titleSpacer;
+  }
+
   &__container {
+    @include tablet-up {
+      @include divider;
+    }
+
+    @include desktop-up {
+      display: flex;
+    }
+  }
+
+  &__titleSpacer {
     margin: 1rem;
+    max-width: $max-width;
+
+    @include tablet-up {
+      padding: 0 2rem;
+      margin: auto;
+    }
+
+    @include desktop-up {
+      padding: 0;
+    }
   }
 
   &__title {
     @include component-space;
     margin-top: 2rem;
     font-size: 2rem;
+
+    @include tablet-up {
+      @include divider;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__thumbnailContainer {
+    @include tablet-up {
+      width: 50%;
+    }
+
+    @include desktop-up {
+      margin-right: 2rem;
+    }
   }
 
   &__thumbnailTitle {
@@ -23,5 +62,23 @@
   &__img {
     @include component-space;
     width: 100%;
+
+    @include desktop-up {
+      width: auto;
+      height: 12rem;
+    }
+  }
+
+  &__buttons {
+    @extend .upload__titleSpacer;
+    @include component-space;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-up {
+      flex-direction: row-reverse;
+      height: 2.5rem;
+      margin-top: 2rem;
+    }
   }
 }

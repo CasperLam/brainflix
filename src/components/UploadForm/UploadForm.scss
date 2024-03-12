@@ -1,9 +1,39 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.upload {
-  &__buttons {
-    display: flex;
-    flex-direction: column;
+.form {
+  width: 100%;
+
+  &__label {
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: $silver;
+  }
+
+  &__description {
+    @include tablet-up {
+      display: flex;
+    }
+  }
+
+  &__input {
+    @include input;
+    @include component-space;
+    font-family: "Avenir Next LT", monospace, sans-serif;
+    padding: 1rem;
+    width: 100%;
+
+    @include tablet-up {
+      padding: 0.6rem;
+      height: 2.5rem;
+    }
+
+    &--area {
+      height: 6rem;
+    }
+
+    &::placeholder {
+      color: $brainflix-primary;
+    }
   }
 }
