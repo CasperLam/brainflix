@@ -12,6 +12,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/upload" element={<Upload />} />
+          <Route path="/:videoId" element={<Homepage />} />
         </Routes>
       </BrowserRouter>
     </>
