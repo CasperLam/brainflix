@@ -2,6 +2,7 @@ import "./Upload.scss";
 import img from "../../assets/images/Upload-video-preview.jpg";
 import UploadForm from "../../components/UploadForm/UploadForm";
 import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 export default function Upload() {
   return (
@@ -24,7 +25,9 @@ export default function Upload() {
           </div>
         </div>
         <div className="upload__buttons">
-          <Button className="button button--publish">PUBLISH</Button>
+          <Link to="/">
+            <Button className="button button--publish">PUBLISH</Button>
+          </Link>
           <Button className="button button--cancelPublish">CANCEL</Button>
         </div>
       </main>
