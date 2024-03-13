@@ -17,14 +17,19 @@
     padding: 0;
   }
 
-  &__logo {
+  &__link {
+    display: flex;
+    align-items: center;
     margin: auto;
     @include component-space;
-    max-width: 7.5rem;
 
     @include tablet-up {
       margin: 0 auto 0 0;
     }
+  }
+
+  &__logo {
+    max-width: 7.5rem;
   }
 
   &__search {
