@@ -37,6 +37,7 @@
 
     &--area {
       height: 6rem;
+      resize: none;
 
       @include tablet-up {
         height: fit-content;

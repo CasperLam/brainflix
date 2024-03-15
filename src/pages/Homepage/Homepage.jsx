@@ -1,21 +1,52 @@
-import { useState } from "react";
-import videos from "../../data/video-details.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./Homepage.scss";
 import Video from "../../components/Video/Video";
 import Description from "../../components/Description/Description";
 import CommentSection from "../../components/CommentSection/CommentSection";
 import VideoList from "../../components/VideoList/VideoList";
+import { useParams } from "react-router-dom";
 
 export default function Homepage() {
-  const [selectedVideo, setSelectedvideo] = useState(videos[0]);
+  const { videoId } = useParams();
+  const [videos, setVideos] = useState(null);
+  const [selectedVideo, setSelectedvideo] = useState(null);
 
-  const handleVideoClick = (video) => {
-    setSelectedvideo(video);
+  const apiKey = "2919b29d-b827-4c7a-88e3-5d544869d1aa";
+
+  const getVideoList = async () => {
+    const { data } = await axios.get(
+      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${apiKey}`
+    );
+
+    setVideos(data);
   };
 
-  const list = videos.filter((video) => {
-    return video !== selectedVideo;
-  });
+  const getVideoDetails = async (videoId) => {
+    const { data } = await axios.get(
+      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
+    );
+
+    setSelectedvideo(data);
+  };
+
+  useEffect(() => {
+    getVideoList();
+  }, []);
+
+  useEffect(() => {
+    if (videoId) {
+      getVideoDetails(videoId);
+    }
+    if (!videoId && videos) {
+      getVideoDetails(videos[0].id);
+    }
+  }, [videoId, videos]);
+
+  if (!selectedVideo || !videos) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <main className="main">
       <Video video={selectedVideo} />
@@ -24,7 +55,7 @@ export default function Homepage() {
           <Description video={selectedVideo} />
           <CommentSection video={selectedVideo} />
         </section>
-        <VideoList videos={list} handleVideoClick={handleVideoClick} />
+        <VideoList videos={videos} selectedVideo={selectedVideo} />
       </section>
     </main>
   );
