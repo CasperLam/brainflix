@@ -27,11 +27,11 @@
 }
 
 @mixin divider {
-  border-bottom: 2px solid $mercury;
+  border-bottom: 2px solid $divider;
 }
 
 @mixin input {
-  border: 2px solid $mercury;
+  border: 2px solid $divider;
   border-radius: 5px;
   background-color: $alabaster;
 }

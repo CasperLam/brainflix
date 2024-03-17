@@ -20,7 +20,7 @@
   &__commentSection {
     @include desktop-up {
       width: 100%;
-      border-right: 2px solid $mercury;
+      border-right: 2px solid $divider;
     }
   }
 }

@@ -16,7 +16,7 @@
     border-radius: 50%;
     height: 2.25rem;
     min-width: 2.25rem;
-    background-color: $mercury;
+    background-color: $divider;
     margin-right: 1rem;
 
     @include tablet-up {
@@ -40,7 +40,7 @@
   }
 
   &__date {
-    color: $silver;
+    color: $altText;
   }
 
   &__content {

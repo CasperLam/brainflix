@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .upload {
-  border-top: 2px solid $mercury;
+  border-top: 2px solid $divider;
 
   &__spacer {
     @extend .upload__titleSpacer;
@@ -56,7 +56,7 @@
   &__thumbnailTitle {
     font-size: 1rem;
     font-weight: 600;
-    color: $silver;
+    color: $altText;
   }
 
   &__img {
@@ -80,5 +80,10 @@
       height: 2.5rem;
       margin-top: 2rem;
     }
+  }
+
+  &__successMessage {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
