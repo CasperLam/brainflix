@@ -12,20 +12,16 @@ export default function Homepage() {
   const [videos, setVideos] = useState(null);
   const [selectedVideo, setSelectedvideo] = useState(null);
 
-  const apiKey = "2919b29d-b827-4c7a-88e3-5d544869d1aa";
+  // const apiKey = "2919b29d-b827-4c7a-88e3-5d544869d1aa";
 
   const getVideoList = async () => {
-    const { data } = await axios.get(
-      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${apiKey}`
-    );
+    const { data } = await axios.get(`http://localhost:8080/videos`);
 
     setVideos(data);
   };
 
   const getVideoDetails = async (videoId) => {
-    const { data } = await axios.get(
-      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
-    );
+    const { data } = await axios.get(`http://localhost:8080/videos/${videoId}`);
 
     setSelectedvideo(data);
   };
