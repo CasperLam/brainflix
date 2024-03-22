@@ -8,7 +8,6 @@ export default function UploadForm() {
   const [message, setMessage] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [formSubmitted, setFormSubmitted] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
   const nav = useNavigate();
@@ -30,8 +29,6 @@ export default function UploadForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    setFormSubmitted(false);
     setFormErrors({});
 
     let formIsValid = true;
@@ -52,8 +49,6 @@ export default function UploadForm() {
       setFormErrors(errors);
       return;
     }
-
-    setFormSubmitted(true);
 
     axios.post("http://localhost:8080/videos", {
       title: title,
