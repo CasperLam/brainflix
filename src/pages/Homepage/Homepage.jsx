@@ -12,8 +12,6 @@ export default function Homepage() {
   const [videos, setVideos] = useState(null);
   const [selectedVideo, setSelectedvideo] = useState(null);
 
-  // const apiKey = "2919b29d-b827-4c7a-88e3-5d544869d1aa";
-
   const getVideoList = async () => {
     const { data } = await axios.get(`http://localhost:8080/videos`);
 
