@@ -45,7 +45,7 @@ export default function Homepage() {
     <main className="main">
       <Video video={selectedVideo} />
       <section className="main__content">
-        <section className="main__commentSection">
+        <section className="main__comment-section">
           <Description video={selectedVideo} />
           <CommentSection video={selectedVideo} />
         </section>

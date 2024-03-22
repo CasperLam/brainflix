@@ -17,7 +17,7 @@
     }
   }
 
-  &__commentSection {
+  &__comment-section {
     @include desktop-up {
       width: 100%;
       border-right: 2px solid $divider;

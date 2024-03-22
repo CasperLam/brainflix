@@ -6,7 +6,7 @@ export default function Description({ video }) {
   return (
     <section className="description">
       <h2 className="description__title">{video.title}</h2>
-      <section className="description__statWrapper">
+      <section className="description__stat-wrapper">
         <div className="description__left">
           <p className="description__channel">By {video.channel}</p>
           <p className="description__date">
@@ -20,7 +20,7 @@ export default function Description({ video }) {
               alt="Views icon"
               className="description__icon"
             />
-            <p className="description__viewsNumber">{video.views}</p>
+            <p className="description__views-number">{video.views}</p>
           </div>
           <div className="description__likes">
             <img
@@ -28,7 +28,7 @@ export default function Description({ video }) {
               alt="Likes icon"
               className="description__icon"
             />
-            <p className="description__likesNumber">{video.likes}</p>
+            <p className="description__likes-number">{video.likes}</p>
           </div>
         </div>
       </section>

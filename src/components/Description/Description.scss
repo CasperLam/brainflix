@@ -15,7 +15,7 @@
     }
   }
 
-  &__statWrapper {
+  &__stat-wrapper {
     @include component-space;
     @include divider;
     display: flex;

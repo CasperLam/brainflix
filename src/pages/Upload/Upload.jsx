@@ -6,13 +6,13 @@ export default function Upload() {
   return (
     <>
       <main className="upload">
-        <div className="upload__titleSpacer">
+        <div className="upload__title-spacer">
           <h2 className="upload__title">Upload Video</h2>
         </div>
         <div className="upload__spacer">
           <div className="upload__container">
-            <div className="upload__thumbnailContainer">
-              <p className="upload__thumbnailTitle">VIDEO THUMBNAIL</p>
+            <div className="upload__thumbnail-container">
+              <p className="upload__thumbnail-title">VIDEO THUMBNAIL</p>
               <img
                 src={img}
                 alt="A male runner in starting blocks"

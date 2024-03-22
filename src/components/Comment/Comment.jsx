@@ -6,7 +6,7 @@ export default function Comment({ comment }) {
       <div className="comment__avatar"></div>
       <div className="comment__wrapper">
         <header className="comment__header">
-          <p className="comment__userName">{comment.name}</p>
+          <p className="comment__user-name">{comment.name}</p>
           <p className="comment__date">
             {new Date(comment.timestamp).toLocaleDateString()}
           </p>

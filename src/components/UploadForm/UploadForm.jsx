@@ -62,7 +62,6 @@ export default function UploadForm() {
       <label htmlFor="videoTitle" className="form__label">
         TITLE YOUR VIDEO
       </label>
-      {formErrors.title && <p className="upload__error">{formErrors.title}</p>}
       <input
         type="text"
         className="form__input"
@@ -74,9 +73,6 @@ export default function UploadForm() {
       <label htmlFor="videoDescription" className="form__label">
         ADD A VIDEO DESCRIPTION
       </label>
-      {formErrors.description && (
-        <p className="upload__error">{formErrors.description}</p>
-      )}
       <div className="form__description">
         <textarea
           id="videoDescription"
@@ -86,15 +82,19 @@ export default function UploadForm() {
           value={description}
         ></textarea>
       </div>
+      {formErrors.title && <p className="form__error">{formErrors.title}</p>}
+      {formErrors.description && (
+        <p className="form__error">{formErrors.description}</p>
+      )}
       <div className="upload__buttons">
         <Button className="button button--publish">PUBLISH</Button>
         {message && (
-          <p className="upload__successMessage">
+          <p className="upload__success-message">
             Your video will be uploaded shortly
           </p>
         )}
         <Link to="/">
-          <Button className="button button--cancelPublish">CANCEL</Button>
+          <Button className="button button--cancel-publish">CANCEL</Button>
         </Link>
       </div>
     </form>

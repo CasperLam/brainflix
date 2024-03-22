@@ -4,7 +4,7 @@ import "./VideoList.scss";
 export default function VideoList({ videos, selectedVideo }) {
   return (
     <aside className="videoList">
-      <h2 className="videoList__sectionTitle">NEXT VIDEOS</h2>
+      <h2 className="videoList__section-title">NEXT VIDEOS</h2>
       <ul className="videoList__list">
         {videos &&
           videos

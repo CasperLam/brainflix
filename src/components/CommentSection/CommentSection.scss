@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.commentSection {
+.comment-section {
   &__counter {
     @include component-space;
     font-weight: 600;

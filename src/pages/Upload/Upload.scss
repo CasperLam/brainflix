@@ -5,7 +5,7 @@
   border-top: 2px solid $divider;
 
   &__spacer {
-    @extend .upload__titleSpacer;
+    @extend .upload__title-spacer;
   }
 
   &__container {
@@ -18,7 +18,7 @@
     }
   }
 
-  &__titleSpacer {
+  &__title-spacer {
     margin: 1rem;
     max-width: $max-width;
 
@@ -43,7 +43,7 @@
     }
   }
 
-  &__thumbnailContainer {
+  &__thumbnail-container {
     @include tablet-up {
       width: 50%;
     }
@@ -53,7 +53,7 @@
     }
   }
 
-  &__thumbnailTitle {
+  &__thumbnail-title {
     font-size: 1rem;
     font-weight: 600;
     color: $altText;
@@ -70,7 +70,7 @@
   }
 
   &__buttons {
-    @extend .upload__titleSpacer;
+    @extend .upload__title-spacer;
     @include component-space;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@
     }
   }
 
-  &__successMessage {
+  &__success-message {
     text-align: center;
     margin-bottom: 1rem;
   }

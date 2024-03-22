@@ -5,15 +5,15 @@ import Comment from "../Comment/Comment";
 
 export default function Comments({ video }) {
   return (
-    <section className="commentSection">
-      <p className="commentSection__counter">
+    <section className="comment-section">
+      <p className="comment-section__counter">
         {video.comments.length} Comments
       </p>
-      <div className="commentSection__form">
+      <div className="comment-section__form">
         <img
           src={avatar}
           alt="User's avatar"
-          className="commentSection__avatar"
+          className="comment-section__avatar"
         />
         <CommentForm />
       </div>
