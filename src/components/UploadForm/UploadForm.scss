@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.form {
+.upload-form {
   width: 100%;
 
   &__label {
@@ -36,5 +36,9 @@
     &::placeholder {
       color: $brainflix-primary;
     }
+  }
+
+  &__error {
+    color: red;
   }
 }

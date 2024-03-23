@@ -58,33 +58,35 @@ export default function UploadForm() {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <label htmlFor="videoTitle" className="form__label">
+    <form className="upload-form" onSubmit={handleSubmit}>
+      <label htmlFor="videoTitle" className="upload-form__label">
         TITLE YOUR VIDEO
       </label>
       <input
         type="text"
-        className="form__input"
+        className="upload-form__input"
         id="videoTitle"
         placeholder="Add a title to your video"
         onChange={handleChangeTitle}
         value={title}
       />
-      <label htmlFor="videoDescription" className="form__label">
+      <label htmlFor="videoDescription" className="upload-form__label">
         ADD A VIDEO DESCRIPTION
       </label>
-      <div className="form__description">
+      <div className="upload-form__description">
         <textarea
           id="videoDescription"
-          className="form__input form__input--area"
+          className="upload-form__input upload-form__input--area"
           placeholder="Add a description to your video"
           onChange={handleChangeDescription}
           value={description}
         ></textarea>
       </div>
-      {formErrors.title && <p className="form__error">{formErrors.title}</p>}
+      {formErrors.title && (
+        <p className="upload-form__error">{formErrors.title}</p>
+      )}
       {formErrors.description && (
-        <p className="form__error">{formErrors.description}</p>
+        <p className="upload-form__error">{formErrors.description}</p>
       )}
       <div className="upload__buttons">
         <Button className="button button--publish">PUBLISH</Button>
